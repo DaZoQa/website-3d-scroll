@@ -9,6 +9,7 @@ body {
   color: #fff;
   font-family: "Raleway", sans-serif;
   line-height: 1.75;
+  font-weight: 300;
   height: 4000px; }
 
 .container {
@@ -29,7 +30,51 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.75s ease;
-  will-change: transform; }
+  transition: opacity 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  will-change: transform;
+  transform-style: preserve-3d; }
+  .frame_bg {
+    background-color: rgba(0, 0, 0, 0.87); }
+  .frame-media {
+    position: relative;
+    height: calc(calc(1vw + 1vh) * 36);
+    width: calc(calc(1vw + 1vh) * 26);
+    background-position: center;
+    background-size: cover; }
+    .frame-media_left {
+      right: calc( 26 / 2 * calc(1vw + 1vh) + 30px); }
+    .frame-media_right {
+      left: calc( 26 / 2 * calc(1vw + 1vh) + 30px); }
+
+video.frame-media {
+  height: calc(calc(1vw + 1vh) * 26);
+  width: calc(calc(1vw + 1vh) * 36); }
+  video.frame-media_right {
+    left: calc( 36 / 2 * calc(1vw + 1vh) + 30px); }
+  video.frame-media_left {
+    right: calc( 36 / 2 * calc(1vw + 1vh) + 30px); }
+
+h1, h2, h3, h4 {
+  font-weight: 100;
+  text-transform: uppercase;
+  width: min-content;
+  line-height: 1; }
+
+.frame h2 {
+  text-align: center;
+  font-size: calc(calc(1vw + 1vh) * 3.3); }
+.frame h3 {
+  font-size: calc(calc(1vw + 1vh) * 3); }
+.frame p {
+  max-width: 30vw;
+  margin-top: 5vh; }
+
+.text-right > * {
+  position: relative;
+  left: 18vw; }
+
+.text-left > * {
+  position: relative;
+  right: 18vw; }
 
 /*# sourceMappingURL=style.css.map */
